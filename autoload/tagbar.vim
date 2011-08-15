@@ -501,6 +501,28 @@ function! s:InitTypes()
         \ {'short' : 'j', 'long' : 'javascript functions', 'fold' : 0}
     \ ]
     let s:known_types.php = type_php
+    " CSS {{{3
+    let type_css = {}
+    let type_css.ctagstype = 'css'
+    let type_css.kinds     = [
+        \ {'short' : 'm' , 'long' : 'media'    , 'fold' : 1}, 
+        \ {'short' : 'i' , 'long' : 'id'       , 'fold' : 0}, 
+        \ {'short' : 'c' , 'long' : 'classes'  , 'fold' : 0}, 
+        \ {'short' : 's' , 'long' : 'selector' , 'fold' : 0}
+    \ ]
+    let s:known_types.css = type_css
+    " SCSS {{{3
+    let type_scss = {}
+    let type_scss.ctagstype = 'scss'
+    let type_scss.kinds     = [
+        \ {'short' : 'x', 'long' : 'mixins'    ,'fold' : 1}, 
+        \ {'short' : 'v', 'long' : 'variables' ,'fold' : 1}, 
+        \ {'short' : 'm', 'long' : 'media'     ,'fold' : 1}, 
+        \ {'short' : 'i', 'long' : 'id'        ,'fold' : 0}, 
+        \ {'short' : 'c', 'long' : 'classes'   ,'fold' : 0}, 
+        \ {'short' : 's', 'long' : 'selector'  ,'fold' : 0} 
+    \ ]
+    let s:known_types.scss = type_scss
     " Python {{{3
     let type_python = {}
     let type_python.ctagstype = 'python'
